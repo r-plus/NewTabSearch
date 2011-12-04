@@ -1,0 +1,10 @@
+Package: jp.r-plus.newtabsearch
+Name: NewTabSearch
+Depends: mobilesubstrate, firmware (>= 4.0)
+Version: 0.0.1
+Architecture: iphoneos-arm
+Description: search to new tab for mobilesafari
+Maintainer: r_plus
+Author: r_plus
+Section: Tweaks
+dev: rplus
