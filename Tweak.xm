@@ -20,13 +20,13 @@
 %hook BrowserController
 - (void)_doSearch:(id)search
 {
-  NSString *query = [search _web_stringByTrimmingWhitespace];
-  SearchQueryBuilder *builder = [%c(SearchQueryBuilder) searchQueryBuilderWithQuery:query];
-  NSURL *searchURL = [builder searchURL];
-  [self addRecentSearch:query];
-  if ([self respondsToSelector:@selector(loadURLInNewWindow:inBackground:animated:)])
-    [self loadURLInNewWindow:searchURL inBackground:NO animated:NO];
-  else
-    [self loadURLInNewWindow:searchURL animated:NO];
+    NSString *query = [search _web_stringByTrimmingWhitespace];
+    SearchQueryBuilder *builder = [%c(SearchQueryBuilder) searchQueryBuilderWithQuery:query];
+    NSURL *searchURL = [builder searchURL];
+    [self addRecentSearch:query];
+    if ([self respondsToSelector:@selector(loadURLInNewWindow:inBackground:animated:)])
+        [self loadURLInNewWindow:searchURL inBackground:NO animated:NO];
+    else
+        [self loadURLInNewWindow:searchURL animated:NO];
 }
 %end
